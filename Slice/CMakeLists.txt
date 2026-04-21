@@ -13,6 +13,8 @@ endif()
 project ("Slice")
 
 # Include sub-projects.
-add_subdirectory ("SliceEngine")
+# add_subdirectory ("SliceEngine")
 
-add_executable("s", main.cpp);
+include_directories(RGFW INTERFACE ${CMAKE_CURRENT_SOURCE_DIR}/thirdparty/RGFW)
+
+add_executable(SliceEditor main.cpp)
