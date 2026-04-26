@@ -2,18 +2,10 @@
 #define RGFW_IMPLEMENTATION
 #include <RGFW.h>
 
-namespace Logger
-{
-    static void BasicLog(std::string msg)
-    {
-        std::cout << msg << std::endl;
-    }
-}
+#include "Utilities/Logger.h"
 
 int main()
 {
-	std::cout << "hi";
-
     // init rgfw
     RGFW_init();
 
@@ -33,7 +25,6 @@ int main()
 
         if (RGFW_isKeyPressed(RGFW_keySpace))
         {
-            Logger::BasicLog("pressed");
             RGFW_window_close(win);
         }
     }

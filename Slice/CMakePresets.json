@@ -17,45 +17,25 @@
                 "rhs": "Windows"
             }
         },
-        {
-            "name": "x64-debug",
-            "displayName": "x64 Debug",
-            "inherits": "windows-base",
-            "architecture": {
-                "value": "x64",
-                "strategy": "external"
-            },
-            "cacheVariables": {
-                "CMAKE_BUILD_TYPE": "Debug"
-            }
+      {
+        "name": "SliceEditor-Debug",
+        "displayName": "SliceEditor-Debug",
+        "inherits": "windows-base",
+        "architecture": {
+          "value": "x64",
+          "strategy": "external"
         },
-        {
-            "name": "x64-release",
-            "displayName": "x64 Release",
-            "inherits": "x64-debug",
-            "cacheVariables": {
-                "CMAKE_BUILD_TYPE": "Release"
-            }
-        },
-        {
-            "name": "x86-debug",
-            "displayName": "x86 Debug",
-            "inherits": "windows-base",
-            "architecture": {
-                "value": "x86",
-                "strategy": "external"
-            },
-            "cacheVariables": {
-                "CMAKE_BUILD_TYPE": "Debug"
-            }
-        },
-        {
-            "name": "x86-release",
-            "displayName": "x86 Release",
-            "inherits": "x86-debug",
-            "cacheVariables": {
-                "CMAKE_BUILD_TYPE": "Release"
-            }
+        "cacheVariables": {
+          "CMAKE_BUILD_TYPE": "EditorDebug"
         }
+      },
+      {
+        "name": "SliceEditor-Release",
+        "displayName": "SliceEditor-Release",
+        "inherits": "SliceEditor-Debug",
+        "cacheVariables": {
+          "CMAKE_BUILD_TYPE": "EditorRelease"
+        }
+      }
     ]
 }
